@@ -121,3 +121,36 @@ footer {
     align-items: center;
     gap: 1rem;
 }
+
+/* media queries */
+
+@media (max-width: 320px) {
+
+    .header-bg {
+        z-index: 0;
+    }
+    .header-content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0;
+        z-index: inherit;
+    }
+    .card {
+        max-height: fit-content;
+        width: 320px;
+        margin-right: auto;
+        z-index: 1;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 320px;
+    }
+    .footer-pic {
+        width: 320px;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
