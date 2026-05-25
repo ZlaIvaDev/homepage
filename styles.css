@@ -12,8 +12,17 @@
 
 body {
     background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+
+}
+header, footer {
+    width: 100%;
 }
 
+.wrapper {
+
+}
 /* temp style */
 .header-pic {
     width: 30rem;
@@ -24,14 +33,17 @@ body {
     width: 45rem;
     height: auto;
     
-}
-
+}/*
+header, footer {
+    width: 100%;
+}*/
 header {
     border: 2px solid pink;
-    padding: 4rem 10rem;
+    /*padding: 4rem 10rem;*/
     /*background-color: rgb(107, 219, 182);*/
-
     position: relative;
+
+
 }
 
 /* prepravka header-a */
@@ -52,6 +64,9 @@ header {
     position: relative;
     z-index: 1;
     padding: 2rem;
+
+    max-width: 70%;/* helped */
+    margin: 0 auto;
 }
 
 div>.card {
@@ -82,18 +97,24 @@ img.logo {
     padding: 2rem;
 }
 .project-container {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 1rem;
     justify-content: center;
+    max-width: 80vw;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min-max(280px, 1fr));
+    gap: 1rem;
 }
 .project-ss {
     max-width: 40vw; /* this needs fixing ! */
     max-height: auto;
 }
+
 div.card {
     background-color: #cde1e6;
+
+    max-width: 100%;
 }
 
 .card-content {
@@ -111,7 +132,9 @@ section>div>img.logo {
 footer {
     background-color: #00a8c8;
     display: flex;
-    padding: 3rem;
+
+    width: 100%;
+    padding: 2rem 15%;
 }
 .phone>img, .email>img {
     width: 2rem;
@@ -120,6 +143,21 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+.flogo {
+    width: 2.5rem;
+    margin-right: auto;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+footer>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
 }
 
 /* media queries */
