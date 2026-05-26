@@ -1,5 +1,5 @@
 :root {
-    font-size: 16px;
+    font-size: 24px;
 }
 
 *,
@@ -21,16 +21,19 @@ header, footer {
 }
 
 .wrapper {
-
+    width: 70%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
 }
 /* temp style */
 .header-pic {
-    width: 30rem;
+    width: 23rem;
     height: auto;
     border-radius: 1rem;
+    box-shadow: 1px 1px 5px rgb(214, 209, 209);
 }
 .footer-pic {
-    width: 45rem;
+    width: 32rem;
     height: auto;
     
 }/*
@@ -38,13 +41,14 @@ header, footer {
     width: 100%;
 }*/
 header {
-    border: 2px solid pink;
     /*padding: 4rem 10rem;*/
     /*background-color: rgb(107, 219, 182);*/
     position: relative;
 
 
 }
+
+/* box shadow */
 
 /* prepravka header-a */
 .header-bg {
@@ -56,6 +60,7 @@ header {
     background-color: #00a8c8;
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 100%);
     z-index: 0;
+    box-shadow: 2px 56px 10px red;
 }
 
 .header-content {
@@ -63,38 +68,41 @@ header {
     align-items: center;
     position: relative;
     z-index: 1;
-    padding: 2rem;
 
     max-width: 70%;/* helped */
     margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.header-card {
+    background-color: whitesmoke;
+    box-shadow: 2px 5px 41px rgb(214, 209, 209);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    
 }
 
 div>.card {
-    background-color: beige;
+    background-color: #cde1e6; 
+
     border: 1px solid black;
     padding: 1rem;
 
     display: flex;
     flex-direction: column;
     border-radius: 0 1rem 1rem 0;
+
+    box-shadow: 5px 5px 5px rgb(214, 209, 209);
 }
-img.logo {
-    width: 2.5rem;
-    margin: 3rem 1rem 0 1rem;
-    
-}
-.card>p {
-    font-size: 1.5rem;
-}
-.logos {
-    margin-left: auto;
-}
+
 
 /* project card container area! */
 
 .projects-h1 {
-    text-align: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 .project-container {
     /*display: flex;
@@ -103,30 +111,39 @@ img.logo {
     justify-content: center;
     max-width: 80vw;*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, min-max(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); /*repeat(auto-fit, minmax(300px, 1fr));*/
     gap: 1rem;
+
+    
+    
 }
 .project-ss {
-    max-width: 40vw; /* this needs fixing ! */
+    max-width: 330px; /* this needs fixing ! */
     max-height: auto;
+    padding: 0 15px;
+    margin: 0;
 }
 
-div.card {
-    background-color: #cde1e6;
-
-    max-width: 100%;
-}
 
 .card-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 2rem 0;
+    align-items: top;
+}
+img.logo {
+    width: 1.75rem;
+    margin: 0 10px;
+    
+}
+.card>p {
+    font-size: 1rem;
+}
+.logos {
+    display: flex; 
+    height: 1.75rem;
 }
 
-section>div>img.logo {
-    margin: 0 0.5rem;
-}
 
 
 footer {
@@ -135,6 +152,7 @@ footer {
 
     width: 100%;
     padding: 2rem 15%;
+    margin-top: 5rem;
 }
 .phone>img, .email>img {
     width: 2rem;
@@ -150,7 +168,7 @@ footer {
 }
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 10rem;
 }
 footer>section {
@@ -164,6 +182,12 @@ footer>section {
 
 @media (max-width: 320px) {
 
+    body {
+        align-items: center;
+    }
+    header {
+        width: 100%;
+    }
     .header-bg {
         z-index: 0;
     }
@@ -174,21 +198,40 @@ footer>section {
         margin: 0;
         z-index: inherit;
     }
+    .header-pic {
+        width: 280px;
+        margin: 0;
+        padding: 0;
+    }
+    .header-content>.card {
+        width: fit-content;
+        background-color: aquamarine;
+        margin: 0;
+    }
     .card {
         max-height: fit-content;
-        width: 320px;
+        width: 280px;
         margin-right: auto;
-        z-index: 1;
+        /*z-index: 1;*/
     }
     footer {
         display: flex;
         flex-wrap: wrap;
-        width: 320px;
+        width: 100%;
+
     }
     .footer-pic {
-        width: 320px;
+        width: 280px;
         height: auto;
         margin-top: 1rem;
         margin-left: 0;
+        padding: 0;
     }
 }
+
+/*
+ok, sve je to okej na neki nacin, ali ne zelim da kartice budu fullscreen,
+ vec da kad je webpage fullscreen, da mogu da vidim 3 kartice na webstrani, 
+ kad se viewport smanji ( tablet recimo ) da vidim 2, 
+i naravno kada otvorim stranicu na telefonu da vidim samo jednu karticu dok skrolam.
+*/
