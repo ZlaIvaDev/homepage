@@ -93,7 +93,6 @@ div>.card {
 
     display: flex;
     flex-direction: column;
-    border-radius: 0 1rem 1rem 0;
 
     box-shadow: 5px 5px 5px rgb(214, 209, 209);
 }
@@ -105,11 +104,7 @@ div>.card {
     padding: 2rem 0;
 }
 .project-container {
-    /*display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    max-width: 80vw;*/
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); /*repeat(auto-fit, minmax(300px, 1fr));*/
     gap: 1rem;
@@ -118,12 +113,9 @@ div>.card {
     
 }
 .project-ss {
-    max-width: 330px; /* this needs fixing ! */
-    max-height: auto;
-    padding: 0 15px;
-    margin: 0;
+     /* this needs fixing ! */
+    padding-bottom: 2rem;
 }
-
 
 .card-content {
     display: flex;
@@ -143,7 +135,6 @@ img.logo {
     display: flex; 
     height: 1.75rem;
 }
-
 
 
 footer {
@@ -166,11 +157,8 @@ footer {
     width: 2.5rem;
     margin-right: auto;
 }
-footer {
-    display: flex;
-    justify-content: space-around;
-    gap: 10rem;
-}
+
+
 footer>section {
     display: flex;
     flex-direction: column;
@@ -212,7 +200,6 @@ footer>section {
         max-height: fit-content;
         width: 280px;
         margin-right: auto;
-        /*z-index: 1;*/
     }
     footer {
         display: flex;
@@ -228,10 +215,3 @@ footer>section {
         padding: 0;
     }
 }
-
-/*
-ok, sve je to okej na neki nacin, ali ne zelim da kartice budu fullscreen,
- vec da kad je webpage fullscreen, da mogu da vidim 3 kartice na webstrani, 
- kad se viewport smanji ( tablet recimo ) da vidim 2, 
-i naravno kada otvorim stranicu na telefonu da vidim samo jednu karticu dok skrolam.
-*/
